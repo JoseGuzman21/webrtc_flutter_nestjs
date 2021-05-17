@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="WebRTC code samples">
+  <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1">
+  <meta itemprop="description" content="Client-side WebRTC code samples">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta id="theme-color" name="theme-color" content="#ffffff">
+  <link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet" type="text/css">
+  <!--  https://codelabs.developers.google.com/codelabs/webrtc-web-->
+  <title>Realtime communication with WebRTC</title>
+  <script src="lib/socket.io.js"></script>
+
+  <link rel="stylesheet" href="css/main.css"/>
+</head>
+
+<body>
+<div id="container">
+
+  <img src="logo.svg" width="100"/>
+  <h1>WebRTC</h1>
+  <p id="peerConnectionStatus"></p>
+
+  <video id="localVideo" playsinline autoplay muted></video>
+  <video id="remoteVideo" playsinline autoplay></video>
+
+  <div class="box">
+    <p id="clientId"></p>
+  </div>
+
+  <div class="box">
+    <div style="display: inline;">
+      <input type="text" id="calleeIdInput" placeholder="Callee Id">
+      <button id="callButton">Call</button>
+    </div>
+    <button id="hangupButton">Hang Up</button>
+  </div>
+
+</div>
+</body>
+
+<script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+<script src="js/webrtc.js"></script>
+
+</html>
